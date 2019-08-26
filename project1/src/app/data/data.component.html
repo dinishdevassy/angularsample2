@@ -1,0 +1,48 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col col-4 col-sm-4"></div>
+        <div class="col col-3 col-sm-3">
+            <table class="table">
+                <tr>
+                    <td> Number 1</td>
+                    <td> <input type="text" name="n1" id="" [(ngModel)]="num1"></td>
+                </tr>
+                <tr>
+                    <td> Number 2</td>
+                    <td> <input type="text" name="n2" id="" [(ngModel)]="num2"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Sum" (click)="add()">
+                    </td>
+                    <td><input type="button" value="Difference" (click)="diff()"></td>
+                </tr>
+            </table> 
+        </div>
+        <div class="col col-4 col-sm-4">
+                <h1 *ngIf="view">Result: {{val}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-4 col-sm-4"></div>
+        <div class="col col-4 col-sm-4">
+            <table>
+                <tr>
+                    <td> Message</td>
+                    <td> <input type="text" name="msg" id="" [(ngModel)]="message"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="show Message" (click)="show()">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col col-4 col-sm-4">
+               <h1> {{wmsg.msg}}</h1>
+        </div>
+    </div>
+</div>
+
+
