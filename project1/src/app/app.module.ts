@@ -1,10 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import {RouterModule,Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {CalcService} from './calc.service';
 import {SampleService} from './sample.service';
+import {ProductService} from './product.service'
 import {HttpClientModule} from '@angular/common/http';
+// import { StorageServiceModule} from'angular-webstorage-service'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -43,9 +47,10 @@ const approutes:Routes=[
     AppRoutingModule,
     RouterModule.forRoot(approutes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    // StorageServiceModule
   ],
-  providers: [CalcService,SampleService],
+  providers: [CalcService,SampleService,ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

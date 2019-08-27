@@ -1,1 +1,47 @@
-<p>viewproduct works!</p>
+<!-- <form action="/product/view" method="GET"> -->
+    <div class="container">
+        <div class="row">
+            <div class="col col-4 col-sm-4">
+                <br><br>
+                <input type="button" name="view" id="" value="View Products" (click)=show()>
+                <br>
+            </div>
+            <div class="col col-4 col-sm-4">
+                <table class='table' *ngIf="view">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                    <tbody>
+                        <tr *ngFor="let i of result;let j=index">
+                            <td>{{i.pid}}</td>
+                            <td>{{i.pname}}</td>
+                            <td>{{i.price}}</td>
+                            <td>
+                                <input type="button" name="edit" id="" value="Edit Products" (click)=change()>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col col-4 col-sm-4">
+                <table *ngIf="view1">
+                    <tr>
+                        <td>ID : </td>
+                        <td><input type="text" name="eid" id="" placeholder="ID" value={{j}}></td>
+                    </tr>
+                    <tr>
+                        <td>Name : </td>
+                        <td><input type="text" name="ename" id="" placeholder="NAME"></td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td><input type="text" name="eprice" id="" placeholder="PRICE"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<!-- </form> -->
